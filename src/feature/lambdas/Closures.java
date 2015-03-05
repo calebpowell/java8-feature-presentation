@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.function.Function;
 
-public class Closure {
+public class Closures {
 
     private String instanceVar = "Mutable Instance Variable";
     
@@ -80,11 +80,10 @@ public class Closure {
     }
     
     public static void main(String[] args) {
-        int[] nums = new int[10000];
         List<String> allNums = new ArrayList<>();
-        for (int num : nums) {
-           allNums.add(String.valueOf(num));
+        for (int i =0; i < 10000; i++) {
+           allNums.add(String.valueOf(i));
         }
-        new Closure().lambdaClosesOverLocalArrayVar(allNums);
+        new Closures().lambdaClosesOverLocalArrayVar(allNums);
     }
 }
